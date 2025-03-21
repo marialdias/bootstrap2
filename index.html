@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Bootstrap</title>
+    <style>
+        body {
+            background-color: black;
+            color: rgb(137, 22, 172);
+            font-family: Arial, sans-serif;
+        }
+
+        .topo {
+    text-align: center;
+    padding: 20px;
+}
+
+.topo h1 {
+    color: rgb(176, 115, 233);
+    margin-bottom: 20px;
+}
+.topo h2{
+    text-align: center;
+    padding: 20px;
+}
+
+.imagem-topo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgb(176, 115, 233);
+    object-fit: cover;
+}
+
+
+        .tr {
+            border: 2px solid rgb(129, 40, 212);
+            padding: 10px;  
+            display: inline-block;
+            border-radius: 20px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topo">
+        <h1>Maria Luiza Dias de Jesus</h1>
+        <img src="imagem/image.png" alt="Foto de perfil" class="imagem-topo">
+    </div>
+    <div class="formulario">
+
+    <h2>Formulário de Contato</h2>
+
+    <form id="formulario">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" required><br><br>
+
+        <label for="assunto">Assunto:</label><br>
+        <textarea id="assunto" name="assunto" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+
+        const whatsappNumber = "(44) 98444-1270"; 
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault();  
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const telefone = document.getElementById("telefone").value;
+            const assunto = document.getElementById("assunto").value;
+
+            const mensagem = `Olá, meu nome é ${nome}, meu e-mail é ${email}, meu telefone é ${telefone} e gostaria de falar sobre: ${assunto}`;
+
+            // Constrói o link de redirecionamento para o WhatsApp
+            const url = `https://wa.me/44984441270?text=${encodeURIComponent(mensagem)}`;
+
+            // Redireciona o usuário para o WhatsApp
+            window.location.href = url;
+        });
+    </script>
+    </div>
+
+</body>
+</html>
+
+   
+</body>
+</html>

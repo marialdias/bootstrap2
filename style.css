@@ -1,0 +1,33 @@
+
+body {
+    background-color: black;
+    color: rgb(137, 22, 172);
+    font-family: Arial, sans-serif;
+}
+
+.topo {
+text-align: center;
+padding: 20px;
+}
+
+.topo h1 {
+color: rgb(176, 115, 233);
+margin-bottom: 20px;
+}
+
+.imagem-topo {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+border: 3px solid rgb(176, 115, 233);
+object-fit: cover;
+}
+
+
+.tr {
+    border: 2px solid rgb(129, 40, 212);
+    padding: 10px;  
+    display: inline-block;
+    border-radius: 20px;
+    margin: 15px;
+}
