@@ -33,14 +33,6 @@
     object-fit: cover;
 }
 
-
-        .tr {
-            border: 2px solid rgb(129, 40, 212);
-            padding: 10px;  
-            display: inline-block;
-            border-radius: 20px;
-            margin: 15px;
-        }
     </style>
 </head>
 <body>
@@ -48,6 +40,8 @@
         <h1>Maria Luiza Dias de Jesus</h1>
         <img src="imagem/image.png" alt="Foto de perfil" class="imagem-topo">
     </div>
+
+    
     <div class="formulario">
 
     <h2>Formulário de Contato</h2>
@@ -80,7 +74,7 @@
             const telefone = document.getElementById("telefone").value;
             const assunto = document.getElementById("assunto").value;
 
-            const mensagem = `Olá, meu nome é ${nome}, meu e-mail é ${email}, meu telefone é ${telefone} e gostaria de falar sobre: ${assunto}`;
+            const mensagem = `Olá, meu nome é ${nome }, meu e-mail é ${ email}, meu telefone é ${ telefone} e gostaria de falar sobre: ${ assunto}`;
 
             // Constrói o link de redirecionamento para o WhatsApp
             const url = `https://wa.me/44984441270?text=${encodeURIComponent(mensagem)}`;
